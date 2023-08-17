@@ -4,7 +4,6 @@ const moviesContainer = document.getElementById('movie-container')
 const url='https://www.omdbapi.com/?apikey=26c15848'
 let movieIDArr=[]
 let movieDataArr=[]
-//let moviesFeed = ''
 
 searchForm.addEventListener('submit', async (e)  =>{
     e.preventDefault()
@@ -17,8 +16,7 @@ searchForm.addEventListener('submit', async (e)  =>{
                    getMovieData(movie.imdbID)
              }
 })
-
-    
+  
  function getMovieData (movieID){
     fetch (`${url}&i=${movieID}`)
     .then(res=> res.json())
@@ -30,25 +28,23 @@ searchForm.addEventListener('submit', async (e)  =>{
 function resultsMovieData(movie){
     
     moviesContainer.innerHTML += `
-         <div >
-            <img id="poster" src=${movie.Poster}>
-         </div>
-                
+         <div id="moviesContainerBlock">
          <div>
+            <img id="poster" src=${movie.Poster}>
             <h2 class="movieHeading"> ${movie.Title} 
-            <span class= "movieRating">    ${movie.imdbRating} </span>
+            <span class= "movieRating"><i class="fa-regular fa-star"></i>${movie.imdbRating} </span>
             </h2>
-         </div>
-                 
-         <div >
+            <h5 class= "addWatchList" id="addWatchList">
+            <i class="fa-solid fa-plus"></i> Watchlist </h5>     
+            <div>
             <h5 class="movieSubHeading"> ${movie.Runtime}</h5>
             <h5 class="movieSubHeading">${movie.Genre}</h5>
-         </div>
-         
-          <div>
-            <p> ${movie.Plot} </p>
+            </div>    
+            <p class="moviePlot"> ${movie.Plot} </p>
+            <hr />
           </div>
-         <hr />
+          
+          </div>
         `
     }
 
