@@ -1,8 +1,71 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: #F8F6F0; 
+    background-color: #F8F6F0;
+    flex-direction: column;
 }
+
+.navigatorContainer{
+    padding-top:10px;
+    text-align: center;
+    display: center;
+    min-width:100vh;
+    max-width: 900px; 
+    width:95%;
+    margin: 0 auto;
+    background: linear-gradient(1deg, rgba(248,246,240,1) 10%, rgba(213,214,234,1) 30%, rgba(213,214,234,1) 20%);
+     
+}
+
+.navigator{
+    width:100%;
+    padding-top:10px;
+    text-align: center;
+    display: center;
+    min-width:320px;
+    max-width: 100%; 
+    margin: 0 auto;
+    background: linear-gradient(1deg, rgba(248,246,240,1) 10%, rgba(213,214,234,1) 30%, rgba(213,214,234,1) 20%);
+    
+}
+
+#navTitle{
+    font-weight: 1000;
+    font-size:3em;
+    font-family: -apple-system, -apple-system, 
+                BlinkMacSystemFont, 'Segoe UI', Roboto, 
+                Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+                'Helvetica Neue', sans-serif;
+    text-align: center;
+    padding-top:30px;
+    padding-bottom:30px;
+    padding-right:350px;
+    display:inline-block;
+}
+
+#navCtrl{
+    
+    display:inline-block;
+    color:#000000;
+    text-decoration: none;
+}
+
+#search-input{
+    margin-top: 500px;
+    padding: 9px 4px 9px 40px;
+    width:75%;
+    min-width:8px;
+    border:none;
+    border-top-left-radius:9px;
+    border-bottom-left-radius:9px;
+    box-shadow: 0px 0px 1px 0 rgba(0,0,0,0.2), 0 1px 20px 0 rgba(0,0,0,0.17);
+    border-color: #DADBDD;
+    display: inline-block;
+    margin:  auto;
+    margin-right:0;
+    background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px;
+}
+
 #search-btn{
     color: #000000;
     background-color: #D1D0CE;
@@ -13,91 +76,100 @@ html, body {
     width: 10%;
     min-width:70px;
     padding: 10px;
-    
     font-weight: 500;
     cursor: -webkit-grabbing;
-    border-top-right-radius: 7px;
-    border-bottom-right-radius:7px;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius:9px;
     text-shadow: #000000;
     font-weight: bold;
-    font-size: ;
     display: inline-block;
     margin: auto;
     margin-left:0em;
 }
-#search-input{
-    padding: 10px;
-    width:75%;
-    min-width:8px;
-    border:none;
-    border-top-left-radius:7px;
-    border-bottom-left-radius:7px;
-    box-shadow: 0px 0px 1px 0 rgba(0,0,0,0.2), 0 1px 20px 0 rgba(0,0,0,0.17);
-    border-color: #DADBDD;
-    display: inline-block;
-    margin: auto;
-    margin-right:0;
-}
 
-.main-container{
-    min-width:150px;
-    max-width: 1200px; 
-    width:80%;
-    padding-left:5%;
-    margin: 0 auto;
-}
-
-.navigatorContainer{
-    padding:40px;
-    text-align: center;
-    display: center;
-    min-width:150px;
-    max-width: 1200px; 
-    width:90%;
-    margin: 0 auto;
-    background-color: #F3E8EA;
-     
-}
-
-.navigator{
-    width:100%;
-    padding:40px;
-    text-align: center;
-    display: center;
-    min-width:150px;
-    max-width: 1200px; 
-    margin: 0 auto;
-    background-color: #F3E8EA;
-}
-
-.movieHeading{
-    display: inline-block;
-    font-weight: bold;
-    font-size: 2rem;
-}
-.movieRating{
-    font-weight: 500;
-    font-size: 1.25rem;
-}
-.movieSubHeading{
-    display: inline-block;
-    font-weight: normal;
-    font-size: 1.125rem;
-}
-
-#poster{
-    border-radius:7px;
-    width:20%;
-    min-width: 150px;
-    display: inline-block;
-}
-
-#navTitle{
+#watchListNavTitle{
     font-weight: 1000;
     font-size:3em;
     font-family: -apple-system, -apple-system, 
                 BlinkMacSystemFont, 'Segoe UI', Roboto, 
                 Oxygen, Ubuntu, Cantarell, 'Open Sans', 
                 'Helvetica Neue', sans-serif;
-     
+    text-align: center;
+    padding-top:30px;
+    padding-bottom:70px;
+    padding-right:300px;
+    display:inline-block;
+}
+
+#watchListNavCtrl{
+    
+    display:inline-block;
+    color:#000000;
+    text-decoration: none;
+}
+
+#main-body{
+    min-width:320px;
+    max-width: 100%; 
+    width:95%;
+    padding-left:0%;
+    margin: 0 auto;
+}
+.main-container{
+        padding-top:50px;
+        padding-bottom:50px;
+        box-sizing: border-box;
+        border:1px;
+        border-color:#000000;
+}
+#moviesContainerBlock{
+    display: grid;
+    flex-direction: column;
+   box-sizing: border-box;
+    border:1px;
+    min-width:800px;
+    max-width: 800px; 
+    border:2px;
+    padding-bottom:10px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.movieHeading{
+    font-weight: 800;
+    font-size: 1.45rem;
+    display:inline-block;
+    max-width:400px;
+}
+.movieRating{
+    display:inline-block;
+    font-weight: 700;
+    font-size: 1.25rem;
+    
+}
+.movieSubHeading{
+    font-weight: bold;
+    font-size: 16px;
+    display:inline-block;
+    padding-bottom:0px;
+}
+.moviePlot{
+    padding-bottom:30px;
+    font-size:17px;
+    max-width:740px;
+    text-align: justify;
+}
+
+.fa-star{
+    color:#FFCE44;
+}
+.addWatchList{
+    float:right;
+}
+#poster{
+    float:left;
+    width:155px;
+    height:225px;
+    padding-right:20px;
+    padding-bottom:20px;
 }
